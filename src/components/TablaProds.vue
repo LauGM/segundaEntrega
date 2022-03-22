@@ -12,7 +12,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="item of enCarro" :key="item.id" >         
+                <tr v-for="(item,index) of enCarro" :key="index" >         
                     <td>{{item.id}}</td> 
                     <td>{{item.nombre}}</td>
                     <td>{{item.marca}}</td>

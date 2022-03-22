@@ -16,6 +16,8 @@
 </template>
 
 <script>
+    //el siguiente json local en caso de superar las solicitudes diarias de mockaroo
+    //import stock from '../data/productos.json'
     import axios from 'axios'
     export default ({
         name:'CarritoCompras',
@@ -27,8 +29,20 @@
         },
         async created(){
             const URL="https://my.api.mockaroo.com/products.json?key=140b4040";
-            await axios.get(URL).then((response) => (this.listaStock=response.data));
+            await axios.get(URL)
+            .then((response) => (this.listaStock=response.data))
+            .catch(function (err) {
+                console.error(err);
+            })
         },
+        // beforeMount(){
+        //     if(this.listaStock.length==0){
+        //         console.log("Utilizando el archivo local")
+        //         console.log(stock)
+        //         this.listaStock=stock;
+        //         console.log("Stock local cargado:");
+        //     }
+        // },
         methods:{
             agregar(item){
                 this.agregados.push(item);

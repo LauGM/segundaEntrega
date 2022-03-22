@@ -42,7 +42,7 @@
 
 <script>
     //el siguiente json local en caso de superar las solicitudes diarias de mockaroo
-    //import usus from '/Users/lau/Documents/Curso vue2022/segunda-entrega/src/usuarios.json'
+    //import usus from '../data/usuarios.json'
     import axios from 'axios'
     import { required, email, max, min } from 'vee-validate/dist/rules'
     import {extend, ValidationProvider, ValidationObserver} from 'vee-validate'
@@ -85,11 +85,24 @@
         },
         async created(){
             const URL="https://my.api.mockaroo.com/users.json?key=140b4040";
-            await axios.get(URL).then((response) => (this.listaUsu=response.data));
-            //this.listaUsu=usus;
+            await axios.get(URL)
+            .then((response)=>this.listaUsu=response.data);
+            // .catch(function (err) {
+            //     console.error(err);
+            // });
             console.log("Usuarios registrados:")
             console.table(this.listaUsu,["email","password"]);
         },
+        // beforeMount(){
+        //     if(this.listaUsu.length==0){
+        //         console.log("Utilizando el archivo local")
+        //         console.log(usus)
+        //         this.listaUsu=usus;
+        //         console.log("Usuarios registrados:")
+        //         console.table(this.listaUsu,["email","password"]);
+        //     }
+        // },
+        
         methods:{
               // en methods las mutaciones
             ...mapMutations([

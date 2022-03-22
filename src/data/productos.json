@@ -1,0 +1,65 @@
+[{
+    "id": 1,
+    "nombre": "Regal",
+    "marca": "Buick",
+    "precio": 194389,
+    "imagen": "http://dummyimage.com/300x300.png/dddddd/000000",
+    "info": "Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla."
+  }, {
+    "id": 2,
+    "nombre": "F250",
+    "marca": "Ford",
+    "precio": 195920,
+    "imagen": "http://dummyimage.com/300x300.png/5fa2dd/ffffff",
+    "info": "Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla."
+  }, {
+    "id": 3,
+    "nombre": "Stratus",
+    "marca": "Dodge",
+    "precio": 107021,
+    "imagen": "http://dummyimage.com/300x300.png/5fa2dd/ffffff",
+    "info": "Curabitur in libero ut massa volutpat convallis."
+  }, {
+    "id": 4,
+    "nombre": "57",
+    "marca": "Maybach",
+    "precio": 131322,
+    "imagen": "http://dummyimage.com/300x300.png/dddddd/000000",
+    "info": "Curabitur at ipsum ac tellus semper interdum."
+  }, {
+    "id": 5,
+    "nombre": "G37",
+    "marca": "Infiniti",
+    "precio": 139987,
+    "imagen": "http://dummyimage.com/300x300.png/dddddd/000000",
+    "info": "Duis at velit eu est congue elementum."
+  }, {
+    "id": 6,
+    "nombre": "V8 Vantage",
+    "marca": "Aston Martin",
+    "precio": 188644,
+    "imagen": "http://dummyimage.com/300x300.png/dddddd/000000",
+    "info": "Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl."
+  }, {
+    "id": 7,
+    "nombre": "Escape",
+    "marca": "Ford",
+    "precio": 111267,
+    "imagen": "http://dummyimage.com/300x300.png/dddddd/000000",
+    "info": "Praesent blandit."
+  }, {
+    "id": 8,
+    "nombre": "Maxima",
+    "marca": "Nissan",
+    "precio": 136270,
+    "imagen": "http://dummyimage.com/300x300.png/cc0000/ffffff",
+    "info": "Aliquam erat volutpat."
+  }, {
+    "id": 9,
+    "nombre": "Windstar",
+    "marca": "Ford",
+    "precio": 117160,
+    "imagen": "http://dummyimage.com/300x300.png/ff4444/ffffff",
+    "info": "In sagittis dui vel nisl. Duis ac nibh."
+  }]
+  
