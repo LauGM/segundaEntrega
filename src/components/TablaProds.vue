@@ -12,12 +12,12 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="(item,index) of enCarro" :key="index" :id="index">         
+                <tr v-for="(item,index) of enCarro" :key="index" :id="index+'_'+item.id">         
                     <td>{{item.id}}</td> 
                     <td>{{item.nombre}}</td>
                     <td>{{item.marca}}</td>
                     <td>{{item.precio}}</td>
-                    <td><button :id="index + 'btn'" class="btn btn-light" @click="eliminar(index)">🗑️</button></td>
+                    <td><button :id="'btn'+index + item.nombre" class="btn btn-light" @click="eliminar(index, item.id)">🗑️</button></td>
                 </tr>
             </tbody>
         </table>
@@ -40,15 +40,18 @@
             }
         },
         methods:{
-            eliminar(index){
+            eliminar(index, itemId){
+                let idFormado=index+'_'+itemId;
+                console.log("el id que voy a sacar de la tabla" + idFormado)
+                // let filaABorrar=document.getElementById(idFormado);
+                // console.log(filaABorrar)
+                // filaABorrar.parentNode.removeChild(filaABorrar);
                 console.log(index)
                 console.log("voy a remover "+this.enCarro[index].marca)
                 this.enCarro.splice(index,1);
+                console.log("Lo que quedo en carro:")
                 console.log(this.enCarro);
                 localStorage.setItem('carro',JSON.stringify(this.enCarro));
-                let filaABorrar=document.getElementById(index);
-                console.log(filaABorrar)
-                filaABorrar.parentNode.removeChild(filaABorrar);
             }
         },
         computed:{
