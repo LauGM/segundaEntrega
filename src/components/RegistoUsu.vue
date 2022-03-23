@@ -1,5 +1,9 @@
 <template>
     <div>
+    <div v-show="!usuarioLoggeado">
+        <p>No puedes registrarte, ya hay un usuario autenticado</p>
+    </div>
+    <div v-show="usuarioLoggeado">
         <form class="inner-block">
             <h3>Registrate</h3>
             <div class="form-group">
@@ -34,6 +38,7 @@
             </p>
         </form>
     </div>
+    </div>
 </template>
 
 <script>
@@ -42,6 +47,7 @@
         name:'RegUsu',
         data() {
             return {
+                usuarioLoggeado:JSON.parse(localStorage.getItem('logged'))==null,
                 nombre:'',
                 apellido:'',
                 email:'',
